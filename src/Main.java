@@ -21,4 +21,7 @@ public class Main {
         return barking && (hourOfDay < 8 || hourOfDay > 22);
     }
 
+    public static boolean number(int number){
+        return number > 5;
+    }
 }
