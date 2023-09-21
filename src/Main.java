@@ -17,6 +17,11 @@ public class Main {
         System.out.println(players);
         players.sort(new NameComparator());
         System.out.println(players);
+
+        GenClass<String> g = new GenClass<>();
+        g.value = "chlen";
+        g.say(players.get(0));
+        System.out.println(g.getElement(players, 1));
     }
 
     public static void printMegaBytesAndKiloBytes(int kiloBytes){
