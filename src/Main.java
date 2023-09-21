@@ -1,8 +1,22 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        printMegaBytesAndKiloBytes(0);
+        //printMegaBytesAndKiloBytes(0);
+
+        ArrayList<Player> players = new ArrayList<>();
+        players.add(new Player(1, "Dmytro", 232));
+        players.add(new Player(5, "Danylo", 434));
+        players.add(new Player(3, "Ihor", 4334));
+        players.sort(new IdComparator());
+        System.out.println(players);
+        players.sort(new NameComparator());
+        System.out.println(players);
     }
 
     public static void printMegaBytesAndKiloBytes(int kiloBytes){
